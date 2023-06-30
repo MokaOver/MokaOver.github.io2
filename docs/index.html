@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+
+        Joseph worker's Login/Sign up page
+
+    </title>
+
+</head>
+
+<body>
+
+    <center>
+        <h1>
+            <p>
+                Welcome our dear visitor
+            </p>
+
+            <hr style="width: 350px;">
+
+            <p>
+                You have to Sign up/Login first before using this website
+            </p>
+        
+            <hr style="width: 800px;">
+
+        </h1>
+    </center>
+    <form action="https://mokaover.github.io/MokaOver.github.io-/" target="_blank" autocapitalize="on" autocomplete="on">
+        <div class="container">
+            <label for="name"><b>Name</b></label>
+            <br>
+            <input type="text" placeholder="Enter your name" name="name" required autofocus>
+            <br>
+            <br>
+            <label for="age"><b>Age</b></label>
+            <br>
+            <input type="Number" placeholder="Enter your age" name="age" required>
+            <br>
+            <br>
+            <button type="submit">Login</button>
+            <br>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+      </form>
+      <div id="result"></div>
+      <script>
+        if(typeof(Storage) !== "undefined") {
+            localStorage.setItem("name")
+            document.getElementById("result").innerHTML = localStorage.getItem("name");
+        }
+      </script>
+    
+</body>
+
+</html>
