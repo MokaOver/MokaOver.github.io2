@@ -33,15 +33,15 @@
         <div class="container">
             <label for="name"><b>Name</b></label>
             <br>
-            <input type="text" placeholder="Enter your name" name="name" id="name" required autofocus>
+            <input type="text" placeholder="Enter your name" name="name" id="name" minlength="3" maxlength="40" required autofocus>
             <br>
             <br>
             <label for="age"><b>Age</b></label>
             <br>
-            <input type="Number" placeholder="Enter your age" name="age" id="age" required>
+            <input type="Number" placeholder="Enter your age" name="age" id="age" min="0" required>
             <br>
             <br>
-            <button type="submit" onclick="displayresult()" id="next" name="next">Next</button>
+            <button type="button" onclick="displayresult()" id="next" name="next">Next</button>
             <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
@@ -51,20 +51,11 @@
       <script>
         var name = "#name";
         var age = "#age";
-        if(name == "Remon" & age == "24") {
-            function displayresult() {
+        
+        function displayresult() {
+            if(name == "Remon" & age == "24") {
                 window.location.replace("https://mokaover.github.io/MokaOver.github.io-/")
             }
-        }
-      </script>
-      <div id="result"></div>
-      <script>
-        if(typeof(Storage) !== "undefined") {
-            localStorage.setItem("name")
-            document.getElementById("result").innerHTML = localStorage.getItem("name");
-        }
-        else{
-            document.getElementById("result").innerHTML = "Unknown";
         }
       </script>
     
